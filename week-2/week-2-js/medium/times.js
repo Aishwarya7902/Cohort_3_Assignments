@@ -9,5 +9,18 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
-}
+    const beforeCalculation=Date.now();;
+    
+    let sum=0;
+    for(let i=1;i<=n;i++){
+        sum+=i;
+    }
+    const afterCalculation=Date.now();
+    
+    const netTime = afterCalculation - beforeCalculation;
+     console.log(`Time taken: ${netTime} ms`);
+        return netTime;
+    }
+
+    // Example usage:
+    calculateTime(100);
